@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: UserService
+  datasource:
+    us-ds:
+      url: jdbc:postgresql://${PROD_DB_HOST}:${PROD_DB_PORT}/${PROD_DB_NAME}
+      jdbcUrl: ${spring.datasource.us-ds.url}
+      username: ${PROD_DB_USERNAME}
+      password: ${PROD_DB_PASSWORD}
+      driver-class-name: org.postgresql.Driver
+  jpa:
+    generate-ddl: off
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false

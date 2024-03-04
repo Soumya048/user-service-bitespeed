@@ -1,1 +1,28 @@
+server:
+  port: 8091
+  servlet:
+    context-path: /user-service
+  forward-headers-strategy: framework
+  max-http-header-size: 2048KB
 
+
+management:
+  server:
+    port: 9888
+
+spring:
+  application:
+    name: UserService
+  datasource:
+    us-ds:
+      url: jdbc:postgresql://localhost:5432/user_db
+      jdbcUrl: ${spring.datasource.us-ds.url}
+      username: postgres
+      password: postgres
+      driver-class-name: org.postgresql.Driver
+  jpa:
+    generate-ddl: off
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create
+    show-sql: false

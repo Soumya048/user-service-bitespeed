@@ -15,7 +15,7 @@ public class Contact {
     private Long id;
     private String phoneNumber;
     private String email;
-    private String linkedId;
+    private Long linkedId;
     private LinkPrecedence linkPrecedence;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
