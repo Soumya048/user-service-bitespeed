@@ -57,7 +57,7 @@ public class ContactServiceImpl implements ContactService {
                             //mapped and saved
                             contactRepository.save(contactEntity);
                         } else {
-                            linkId = contactEntity.getLinkedId();
+                            linkId = contactEntity.getId();
                         }
                         index++;
                     }
@@ -133,10 +133,8 @@ public class ContactServiceImpl implements ContactService {
     }
 
     private ContactDetails getRelatedContacts(IdentifyContactReq request) {
-        System.out.println("-------------");
         List<ContactEntity> foundContactEntittList = contactRepository.checkDuplicateContact(request.getEmail(), request.getPhoneNumber());
 
-        System.out.println("-----------------");
         System.out.println(foundContactEntittList.size());
 
         Long primaryContactId = null;
