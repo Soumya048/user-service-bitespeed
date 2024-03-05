@@ -12,6 +12,12 @@ baseUrl: https://user-service-bitespeed-production.up.railway.app
 contextPath: user-service
 ```
 
+### Tech Stack Used
+- Java
+- Spring Boot
+- gradle
+- PostgreSQL
+
 ### ER Diagram
 ![user_db_er_diagram](https://github.com/Soumya048/user-service-bitespeed/assets/91946820/88667484-fbd6-4cf3-99c0-2d780b895509)
 
